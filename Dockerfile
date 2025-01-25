@@ -4,7 +4,7 @@ WORKDIR /home/app
 
 COPY . ./
 
-RUN npm i
+RUN npm ci
 
 EXPOSE 3333
 
