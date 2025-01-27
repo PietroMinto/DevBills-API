@@ -1,4 +1,4 @@
-import type { Category } from "../entities/category.entity";
+import type { Category } from "../../entities/category.entity";
 import type { CategoryModel } from "../schemas/category.schema";
 
 export class CategoriesRepository {

@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
+import type { CategoriesRepository } from "../database/repositories/categories.repository";
 import type { CreatecategoryDto } from "../dtos/categories.dto";
 import { Category } from "../entities/category.entity";
 import { AppError } from "../errors/app.error";
-import type { CategoriesRepository } from "../repositories/categories.repository";
 
 export class CategoriesService {
 	constructor(private categoriesRepository: CategoriesRepository) {}

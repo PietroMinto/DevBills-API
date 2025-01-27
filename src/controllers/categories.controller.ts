@@ -2,9 +2,9 @@ import type { NextFunction, Request, Response } from "express";
 import { z } from "zod";
 
 import { StatusCodes } from "http-status-codes";
+import { CategoriesRepository } from "../database/repositories/categories.repository";
+import { CategoryModel } from "../database/schemas/category.schema";
 import type { CreatecategoryDto } from "../dtos/categories.dto";
-import { CategoriesRepository } from "../repositories/categories.repository";
-import { CategoryModel } from "../schemas/category.schema";
 import { CategoriesService } from "../services/categories-service";
 
 export class CategoriesController {
