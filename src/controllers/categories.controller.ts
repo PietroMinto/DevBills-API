@@ -1,5 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
+import { z } from "zod";
 
+import { StatusCodes } from "http-status-codes";
 import type { CreatecategoryDto } from "../dtos/categories.dto";
 import { CategoriesRepository } from "../repositories/categories.repository";
 import { CategoryModel } from "../schemas/category.schema";
@@ -19,7 +21,7 @@ export class CategoriesController {
 
 			const result = await service.create({ title, color });
 
-			return res.status(201).json(result);
+			return res.status(StatusCodes.CREATED).json(result);
 		} catch (err) {
 			next(err);
 		}
