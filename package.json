@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/server.ts"
+    "dev": "tsx watch ./src/server.ts",
+    "build": "tsc",
+    "start": "node ./build/src/server.js"
   },
   "keywords": [],
   "author": "Pietro Fulan Minto",
@@ -12,12 +14,14 @@
   "description": "Devbills",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "esbuild": "^0.24.2",
     "express": "^4.21.2",
