@@ -4,8 +4,14 @@ WORKDIR /home/app
 
 COPY . ./
 
-RUN npm i
+RUN chmod +x ./start.sh
+
 
 EXPOSE 3333
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev", "start"]
+
+USER root
+
+ENTRYPOINT ["/bin/sh", "./start.sh"]
+
